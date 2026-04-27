@@ -1,23 +1,26 @@
 # Poryadok
 
-## Project Overview
-Poryadok is a powerful and flexible tool designed to enhance productivity and improve workflow management for individuals and teams. It allows users to organize tasks efficiently, collaborate seamlessly, and track progress in real-time. 
+## Обзор проекта
+Poryadok — это мощный и гибкий инструмент, разработанный для повышения производительности и улучшения управления рабочим процессом как для отдельных пользователей, так и для команд. Он позволяет пользователям эффективно организовывать задачи, беспрепятственно сотрудничать и отслеживать прогресс в режиме реального времени.
 
-## Features
-- **Task Management:** Create, assign, and prioritize tasks with due dates.
-- **Collaboration Tools:** Share projects with team members and communicate effectively within the app.
-- **Progress Tracking:** Visualize project milestones and monitor completion statuses.
-- **Integrations:** Connect with other productivity tools and platforms for enhanced functionality.
+## Функции
+- **Управление задачами:** Создавайте, назначайте и устанавливайте приоритеты задач с указанием сроков выполнения.
 
-## Getting Started
-To get started with Poryadok, follow these steps:
-1. Clone the repository: `git clone https://github.com/Donk1hong/Poryadok.git`
-2. Navigate to the project directory: `cd Poryadok`
-3. Install dependencies: `npm install`
-4. Start the application: `npm start`
+- **Инструменты для совместной работы:** Делитесь проектами с членами команды и эффективно общайтесь внутри приложения.
 
-## Contribution Guidelines
-We welcome contributions from the community! Please submit a pull request or open an issue to discuss your ideas.
+- **Отслеживание прогресса:** Визуализируйте этапы проекта и отслеживайте статусы завершения.
 
-## License
-This project is licensed under the MIT License. See the LICENSE file for more details.
+- **Интеграция:** Подключайтесь к другим инструментам и платформам повышения производительности для расширения функциональности.
+
+## Начало работы
+Чтобы начать работу с Poryadok, выполните следующие шаги:
+1. Клонируйте репозиторий: `git clone https://github.com/Donk1hong/Poryadok.git`
+2. Перейдите в каталог проекта: `cd Poryadok`
+3. Установите зависимости: `npm install`
+4. Запустите приложение: `npm start`
+
+## Рекомендации по участию
+Мы приветствуем вклад сообщества! Пожалуйста, отправьте запрос на слияние (pull request) или создайте проблему (issue), чтобы обсудить ваши идеи.
+
+## Лицензия
+Этот проект распространяется под лицензией MIT. Подробнее см. файл LICENSE.
