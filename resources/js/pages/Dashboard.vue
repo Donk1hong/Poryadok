@@ -3,7 +3,8 @@ import AppLayout from "@/Layouts/AppLayout.vue";
 import { router } from '@inertiajs/vue3';
 import { ref } from 'vue';
 
-const props = defineProps<{ path?: string }>();
+defineProps<{ path?: string }>();
+
 const isScanning = ref(false);
 const progress = ref(0);
 
@@ -16,7 +17,10 @@ const startAnalysis = () => {
         if (progress.value >= 100) {
             progress.value = 100;
             clearInterval(interval);
-            setTimeout(() => { isScanning.value = false; progress.value = 0; }, 500);
+            setTimeout(() => {
+                isScanning.value = false;
+                progress.value = 0;
+            }, 500);
         }
     }, 40);
 };
@@ -34,7 +38,7 @@ const startAnalysis = () => {
                     </svg>
                 </div>
 
-                <h2 class="text-[12px] font-black uppercase tracking-[0.4em] mb-2">Импортировать папку</h2>
+                <h2 class="text-[12px] font-black uppercase tracking-[0.4em] mb-2">ВЫБРАТЬ ПАПКУ</h2>
                 <div class="h-px w-8 bg-zinc-200 dark:border-zinc-800 group-hover:w-12 transition-all"></div>
             </div>
 
@@ -46,8 +50,8 @@ const startAnalysis = () => {
 
                     <div class="flex items-center justify-between mb-12">
                         <div class="space-y-1">
-                            <h3 class="text-xs font-black uppercase tracking-widest opacity-40">Статус</h3>
-                            <p class="text-lg font-black uppercase tracking-tighter">{{ isScanning ? 'Оптимизация' : 'Готов' }}</p>
+                            <h3 class="text-xs font-black uppercase tracking-widest opacity-40">СТАТУС</h3>
+                            <p class="text-lg font-black uppercase tracking-tighter">{{ isScanning ? 'АНАЛИЗ' : 'ГОТОВО' }}</p>
                         </div>
                         <div v-if="isScanning" class="flex flex-col items-end">
                             <span class="text-xl font-black font-mono tracking-tighter">{{ Math.round(progress) }}%</span>
@@ -58,17 +62,17 @@ const startAnalysis = () => {
                         <div class="flex items-center gap-4 min-w-0">
                             <div class="w-8 h-8 rounded border border-zinc-200 dark:border-zinc-700 flex items-center justify-center shrink-0 opacity-50 text-xs">📁</div>
                             <div class="min-w-0">
-                                <p class="text-[10px] font-black uppercase tracking-widest opacity-40 mb-1">Целевой каталог</p>
+                                <p class="text-[10px] font-black uppercase tracking-widest opacity-40 mb-1">ПУТЬ</p>
                                 <p class="text-[12px] font-bold truncate font-mono tracking-tight">{{ path }}</p>
                             </div>
                         </div>
-                        <button @click="selectFolder" v-show="!isScanning" class="text-[8px] font-black uppercase tracking-widest border border-zinc-200 dark:border-zinc-700 px-3 py-1.5 rounded-md hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-all">Изменить</button>
+                        <button @click="selectFolder" v-show="!isScanning" class="text-[10px] font-black uppercase tracking-widest border border-zinc-200 dark:border-zinc-700 px-3 py-1.5 rounded-md hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-all">ИЗМЕНИТЬ</button>
                     </div>
                 </div>
 
                 <button @click="startAnalysis" :disabled="isScanning"
                         class="w-full h-14 bg-black dark:bg-white text-white dark:text-black rounded-2xl font-black uppercase tracking-[0.2em] text-[10px] transition-all active:scale-[0.98] disabled:opacity-30 flex items-center justify-center gap-4">
-                    {{ isScanning ? 'Обработка метаданных' : 'Начать сканирование' }}
+                    {{ isScanning ? 'ОБРАБОТКА ДАННЫХ' : 'ЗАПУСТИТЬ ИИ' }}
                     <svg v-if="!isScanning" xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 7l5 5m0 0l-5 5m5-5H6" />
                     </svg>
