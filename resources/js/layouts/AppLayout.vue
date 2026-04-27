@@ -97,7 +97,6 @@ const isActive = (href: string) => (href === '/' ? currentRoute.value === '/' ||
 </template>
 
 <style>
-/* Performance fix for theme lag */
 .no-transitions * {
     transition: none !important;
 }
