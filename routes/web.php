@@ -2,14 +2,21 @@
 
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
+use Illuminate\Http\Request;
 
-Route::get('/', function () {
-    return Inertia::render('Welcome');
+Route::get('/', function (Request $request) {
+    return Inertia::render('Dashboard', [
+        'path' => $request->query('path')
+    ]);
 })->name('home');
 
-Route::get('dashboard', function () {
-    return Inertia::render('Dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/history', function () {
+    return Inertia::render('History');
+})->name('history');
+
+Route::post('/select-folder', function () {
+    return redirect()->route('home', ['path' => '/Users/Ruslan/Downloads/CleanUp']);
+});
 
 require __DIR__.'/settings.php';
 require __DIR__.'/auth.php';
