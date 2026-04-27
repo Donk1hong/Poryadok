@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import AppLayout from "@/Layouts/AppLayout.vue";
+import AppLayout from "@/layouts/AppLayout.vue";
 
 const history = [
     { id: 1, name: 'Downloads_Q1', files: 342, date: 'TODAY, 14:30', status: 'ЗАВЕРШЕН' },
