@@ -25,36 +25,6 @@
 
 ---
 
-## 🚀 Быстрый старт
-
-Убедитесь, что у вас установлены PHP 8.3, Composer и Node.js.
-
-1.  **Клонирование:**
-    ```bash
-    git clone [https://github.com/Donk1hong/Poryadok.git](https://github.com/Donk1hong/Poryadok.git)
-    cd Poryadok
-    ```
-
-2.  **Backend:**
-    ```bash
-    composer install
-    cp .env.example .env
-    php artisan key:generate
-    ```
-
-3.  **Frontend:**
-    ```bash
-    npm install
-    npm run build
-    ```
-
-4.  **Запуск NativePHP:**
-    ```bash
-    php artisan native:serve
-    ```
-
----
-
 ## 🏗 Будущее проекта (Roadmap)
 
 - [ ] **Smart Rules:** Создание собственных промптов для уникальных правил сортировки.
