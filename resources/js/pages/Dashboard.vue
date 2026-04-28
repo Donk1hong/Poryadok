@@ -58,7 +58,7 @@ const startAnalysis = async () => {
                 router.reload({ only: ['path'] });
             }, 1500);
         }
-    } catch (error) {
+    } catch {
         clearInterval(interval);
         scanStore.reset();
         statusMessage.value = 'Ошибка';
