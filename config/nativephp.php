@@ -81,6 +81,10 @@ return [
         'NATIVEPHP_AZURE_CODE_SIGNING_ACCOUNT_NAME',
     ],
 
+    'copy' => [
+        'bin' => 'bin',
+    ],
+
     /**
      * A list of files and folders that should be removed from the
      * final app before it is bundled for production.
@@ -160,7 +164,7 @@ return [
      * Define your own scripts to run before and after the build process.
      */
     'prebuild' => [
-        // 'npm run build',
+        'npm run build',
     ],
 
     'postbuild' => [

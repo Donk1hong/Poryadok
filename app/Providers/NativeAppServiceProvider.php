@@ -17,7 +17,7 @@ class NativeAppServiceProvider implements ProvidesPhpIni
         Window::open()
             ->width(1024)
             ->height(768)
-            ->showDevTools(false)
+            ->showDevTools()
             ->rememberState()
             ->titleBarHidden()
             ->trafficLightPosition(10, 10);
